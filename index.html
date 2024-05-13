@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content/css/index.css">
+    <script src="./content/js/app.js" defer></script>
+    <title>form builder</title>
+</head>
+
+<body>
+    <main>
+        <div id="sidebar">
+            <div class="item-ul">
+                <div class="item-li" draggable="true" id="li1" ondragstart="drag(event)">1</div>
+                <div class="item-li" draggable="true" id="li2" ondragstart="drag(event)">2</div>
+                <div class="item-li" draggable="true" id="li3" ondragstart="drag(event)">3</div>
+                <div class="item-li" draggable="true" id="li4" ondragstart="drag(event)">4</div>
+            </div>
+        </div>
+        <div class="content A4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    </main>
+</body>
+
+</html>

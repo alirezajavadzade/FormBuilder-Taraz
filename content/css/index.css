@@ -1,0 +1,70 @@
+/* A4 size */
+body {
+    margin: 0;
+    background: #e0e0e0;
+    height: 100%;
+}
+
+.content {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+    margin: 5mm auto;
+}
+
+.content.A4 {
+    width: 210mm;
+    height: 296mm;
+}
+
+.content.A5 {
+    width: 210mm;
+    height: 148mm;
+}
+
+@media print {
+    .content {
+        box-shadow: none;
+        page-break-after: always;
+        margin: 0;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+/* sidebar */
+main {
+    display: flex;
+}
+
+#sidebar {
+    width: 10rem;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.item-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-li {
+    box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+    width: 2rem;
+    padding: 2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    cursor: move;
+}
+
+.content .item-li {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+}
